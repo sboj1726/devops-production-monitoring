@@ -1,0 +1,4 @@
+2026-09-24T10:00:01Z INFO transaction_id=demo-1001 status=SUCCESS latency_ms=182
+2026-09-24T10:00:03Z INFO transaction_id=demo-1002 status=SUCCESS latency_ms=210
+2026-09-24T10:00:06Z WARN transaction_id=demo-1003 status=TIMEOUT latency_ms=3000
+2026-09-24T10:00:08Z ERROR transaction_id=demo-1004 status=FAILED reason=DATABASE_TIMEOUT
