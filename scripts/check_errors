@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+LOG_FILE="${1:-sample-logs/application.log}"
+
+echo "=== Error summary ==="
+grep -E "ERROR|TIMEOUT|FAILED" "$LOG_FILE" || true
+
+echo
+echo "=== Counts ==="
+printf "ERROR: "
+grep -c "ERROR" "$LOG_FILE" || true
+printf "TIMEOUT: "
+grep -c "TIMEOUT" "$LOG_FILE" || true
+printf "FAILED: "
+grep -c "FAILED" "$LOG_FILE" || true
